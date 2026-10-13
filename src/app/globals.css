@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────────────────
+   BRAND CONFIG — edit here to update the entire site's tokens
+   ───────────────────────────────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors — extracted from logo.svg */
+  --brand-primary:       #12D9DE;   /* teal accent (logo highlight) */
+  --brand-primary-hover: #0fb8bc;   /* teal darkened ~10% for hover */
+  --brand-dark:          #111111;   /* near-black (logo body)        */
+
+  /* Surfaces */
+  --brand-bg:            #ffffff;
+  --brand-bg-subtle:     #f0fefe;   /* teal-tinted off-white         */
+  --brand-border:        #e2e8f0;
+
+  /* Fonts — variable names must match layout.tsx injections */
+  --font-heading: var(--font-space-grotesk);
+  --font-body:    var(--font-inter);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   TAILWIND v4 THEME — maps brand tokens to utility classes
+   e.g. text-brand-primary, bg-brand-dark, font-heading
+   ───────────────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-primary:       var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-dark:          var(--brand-dark);
+  --color-brand-bg:            var(--brand-bg);
+  --color-brand-bg-subtle:     var(--brand-bg-subtle);
+  --color-brand-border:        var(--brand-border);
+
+  --font-heading: var(--font-heading);
+  --font-body:    var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ─────────────────────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────────────────────── */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-dark);
+  font-family: var(--font-body), system-ui, sans-serif;
 }
