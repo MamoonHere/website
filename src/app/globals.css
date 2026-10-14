@@ -53,6 +53,11 @@
   animation: text-shimmer 5s linear infinite;
 }
 
+@keyframes tab-progress {
+  from { height: 0%; }
+  to   { height: 100%; }
+}
+
 @keyframes scroll-dot {
   from { transform: translateY(-16px); }
   to   { transform: translateY(40px); }

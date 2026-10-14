@@ -7,14 +7,13 @@ export default function WaveRings() {
         <span
           key={i}
           aria-hidden
-          className="hidden lg:block"
           style={{
-            position: "fixed",
+            position: "absolute",
             width: "4px",
             height: "4px",
             borderRadius: "50%",
-            top: "39svh",
-            left: "19vw",
+            top: "32%",
+            left: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: 0,
             pointerEvents: "none",
