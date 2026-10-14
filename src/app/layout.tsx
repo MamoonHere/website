@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import { Navbar, WaveRings } from "@/components/layout";
+import { Navbar } from "@/components/layout";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,7 +29,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <WaveRings />
         <Navbar />
         {children}
       </body>

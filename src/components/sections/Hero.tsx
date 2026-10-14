@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/ui";
+import { WaveRings } from "@/components/layout";
 import { SERVICE_TAGS, TECH_LOGOS } from "@/constants";
 
 export default function Hero() {
@@ -10,6 +11,7 @@ export default function Hero() {
                  lg:flex-row lg:h-[calc(100svh-5rem)]"
       aria-label="Hero"
     >
+      <WaveRings />
       <div className="
         relative flex-shrink-0 flex items-center justify-center
         pt-8 pb-4 px-8
