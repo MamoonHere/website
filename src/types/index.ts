@@ -9,6 +9,14 @@ export interface TechLogo {
   filter?: string;
 }
 
+export interface PainPoint {
+  tab: string;
+  headline: string;
+  description: string;
+  image: string;
+  cta: { label: string; href: string };
+}
+
 export interface SeoMeta {
   title: string;
   description: string;
