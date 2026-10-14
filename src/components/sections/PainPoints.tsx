@@ -43,7 +43,7 @@ export default function PainPoints() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-20">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
 
           {/* Tab list */}
           <ul className="flex flex-col lg:w-[30%] shrink-0 self-start lg:sticky lg:top-28" role="list">
@@ -53,7 +53,7 @@ export default function PainPoints() {
                   onClick={() => handleTabClick(i)}
                   className={`relative w-full text-left px-6 py-5 overflow-hidden transition-all duration-200 ${
                     active === i
-                      ? "bg-brand-primary/5 text-brand-dark"
+                      ? "bg-brand-primary/[0.12] text-brand-dark"
                       : "text-neutral-400 hover:text-neutral-600"
                   }`}
                 >
