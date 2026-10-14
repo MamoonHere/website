@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Navbar, WaveRings } from "@/components/layout";
 import "./globals.css";
 
-// Font loading — variable names must match globals.css :root declarations
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -21,13 +22,17 @@ export const metadata: Metadata = {
   description: "First Nations Digital — company website",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <WaveRings />
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

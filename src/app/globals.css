@@ -1,48 +1,78 @@
 @import "tailwindcss";
 
-/* ─────────────────────────────────────────────────────────────
-   BRAND CONFIG — edit here to update the entire site's tokens
-   ───────────────────────────────────────────────────────────── */
-
 :root {
-  /* Colors — extracted from logo.svg */
-  --brand-primary:       #12D9DE;   /* teal accent (logo highlight) */
-  --brand-primary-hover: #0fb8bc;   /* teal darkened ~10% for hover */
-  --brand-dark:          #111111;   /* near-black (logo body)        */
-
-  /* Surfaces */
+  --brand-primary:       #12D9DE;
+  --brand-primary-hover: #0fb8bc;
+  --brand-dark:          #0a0a0a;
+  --brand-surface:       #080808;
+  --brand-surface-end:   #111111;
   --brand-bg:            #ffffff;
-  --brand-bg-subtle:     #f0fefe;   /* teal-tinted off-white         */
+  --brand-bg-subtle:     #f0fefe;
   --brand-border:        #e2e8f0;
-
-  /* Fonts — variable names must match layout.tsx injections */
-  --font-heading: var(--font-space-grotesk);
-  --font-body:    var(--font-inter);
+  --font-heading:        var(--font-space-grotesk);
+  --font-body:           var(--font-inter);
 }
-
-/* ─────────────────────────────────────────────────────────────
-   TAILWIND v4 THEME — maps brand tokens to utility classes
-   e.g. text-brand-primary, bg-brand-dark, font-heading
-   ───────────────────────────────────────────────────────────── */
 
 @theme inline {
   --color-brand-primary:       var(--brand-primary);
   --color-brand-primary-hover: var(--brand-primary-hover);
   --color-brand-dark:          var(--brand-dark);
+  --color-brand-surface:       var(--brand-surface);
+  --color-brand-surface-end:   var(--brand-surface-end);
   --color-brand-bg:            var(--brand-bg);
   --color-brand-bg-subtle:     var(--brand-bg-subtle);
   --color-brand-border:        var(--brand-border);
-
-  --font-heading: var(--font-heading);
-  --font-body:    var(--font-body);
+  --font-heading:              var(--font-heading);
+  --font-body:                 var(--font-body);
+  --animate-hero-fade-up:      hero-fade-up 0.65s ease-out both;
 }
 
-/* ─────────────────────────────────────────────────────────────
-   BASE STYLES
-   ───────────────────────────────────────────────────────────── */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes text-shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary) 0%,
+    var(--brand-primary) 30%,
+    rgba(255, 255, 255, 0.92) 50%,
+    var(--brand-primary) 70%,
+    var(--brand-primary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-shimmer 5s linear infinite;
+}
+
+@keyframes wave-ring {
+  0%   { box-shadow: 0 0 20px 0px    rgba(18, 217, 222, 0.45); opacity: 1; }
+  100% { box-shadow: 0 0 60px 1600px rgba(18, 217, 222, 0);    opacity: 0; }
+}
 
 body {
-  background-color: var(--brand-bg);
+  background: linear-gradient(to right, var(--brand-surface), var(--brand-surface-end));
+  min-height: 100svh;
   color: var(--brand-dark);
   font-family: var(--font-body), system-ui, sans-serif;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
