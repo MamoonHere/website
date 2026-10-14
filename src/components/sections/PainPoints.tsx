@@ -63,7 +63,7 @@ export default function PainPoints() {
                       />
                     )}
                     <span className="relative flex items-center gap-3">
-                      <span className={`font-mono text-[10px] shrink-0 tabular-nums ${active === i ? "font-bold text-brand-primary" : "text-neutral-300"}`}>
+                      <span className={`font-mono text-[13px] shrink-0 tabular-nums ${active === i ? "font-bold text-brand-primary" : "text-neutral-300"}`}>
                         0{i + 1}
                       </span>
                       <span className="font-heading font-semibold text-[13px] lg:text-[14px] tracking-[0.06em]">
