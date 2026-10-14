@@ -20,6 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "First Nations Digital",
   description: "First Nations Digital — company website",
+  icons: { icon: "/logo.svg" },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
