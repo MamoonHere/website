@@ -101,12 +101,12 @@ export default function PainPoints() {
               </ul>
               <Link
                 href={point.cta.href}
-                className="self-start inline-flex items-center font-heading font-bold
-                           text-[11px] sm:text-[12px] tracking-[0.2em]
-                           px-7 py-4 rounded-md bg-brand-primary text-brand-dark
-                           shadow-[0_4px_24px_rgba(18,217,222,0.3)]
-                           hover:bg-brand-primary-hover hover:shadow-[0_4px_32px_rgba(18,217,222,0.5)]
-                           transition-all duration-200"
+                className="self-start inline-flex items-center gap-2 font-heading font-bold
+                           text-[12px] sm:text-[14px] tracking-[0.2em]
+                           px-5 py-3 sm:px-7 sm:py-4 rounded-md bg-brand-primary text-brand-dark
+                           shadow-[0_0_22px_rgba(18,217,222,0.35)]
+                           hover:bg-brand-primary-hover hover:shadow-[0_0_38px_rgba(18,217,222,0.6)]
+                           transition-all duration-300"
               >
                 {point.cta.label}
               </Link>
