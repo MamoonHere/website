@@ -36,7 +36,7 @@ export default function PainPoints() {
 
           {/* Left column — heading + tabs */}
           <div className="lg:w-[30%] shrink-0 flex flex-col">
-            <p className="font-body text-[11px] tracking-[0.35em] uppercase text-brand-primary mb-5">
+            <p className="font-body text-[13px] tracking-[0.35em] uppercase text-brand-primary mb-5">
               Challenges
             </p>
             <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
