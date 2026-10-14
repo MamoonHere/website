@@ -18,6 +18,19 @@ export interface PainPoint {
   cta: { label: string; href: string };
 }
 
+export interface ServiceCard {
+  number: string;
+  name: string;
+  description: string;
+  href: string;
+}
+
+export interface Industry {
+  name: string;
+  description: string;
+  image: string;
+}
+
 export interface SeoMeta {
   title: string;
   description: string;

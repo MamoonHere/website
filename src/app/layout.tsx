@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import { Navbar } from "@/components/layout";
+import { Navbar, Footer } from "@/components/layout";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

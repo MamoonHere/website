@@ -1,4 +1,4 @@
-import type { NavLink, TechLogo, PainPoint } from "@/types";
+import type { NavLink, TechLogo, PainPoint, ServiceCard, Industry } from "@/types";
 
 export const SITE_NAME = "First Nations Digital";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -60,6 +60,78 @@ export const PAIN_POINTS: PainPoint[] = [
     points: ["Hiring is slow and expensive", "Freelancers lack the full picture", "Momentum stalls between projects"],
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
     cta: { label: "WORK WITH OUR TEAM", href: "/company" },
+  },
+];
+
+export const SERVICE_CARDS: ServiceCard[] = [
+  {
+    number: "01",
+    name: "Custom Software Development",
+    description: "Bespoke applications built around your exact workflows — not the other way around.",
+    href: "/services",
+  },
+  {
+    number: "02",
+    name: "AI & Automation",
+    description: "Intelligent workflows and custom LLM integrations that put AI to work in your operations.",
+    href: "/services",
+  },
+  {
+    number: "03",
+    name: "Cloud Architecture",
+    description: "Scalable, secure infrastructure designed for growth on AWS, Azure, or GCP.",
+    href: "/services",
+  },
+  {
+    number: "04",
+    name: "Data Engineering",
+    description: "Pipelines, warehouses, and dashboards that turn raw data into reliable decisions.",
+    href: "/services",
+  },
+  {
+    number: "05",
+    name: "AI Audit & Strategy",
+    description: "A structured assessment of where AI delivers the most value in your organisation.",
+    href: "/ai-audit-strategy",
+  },
+  {
+    number: "06",
+    name: "Mobile Development",
+    description: "Native and cross-platform apps your customers actually want to use.",
+    href: "/services",
+  },
+];
+
+export const INDUSTRIES: Industry[] = [
+  {
+    name: "Healthcare",
+    description: "Patient systems, clinical workflows, and compliance-ready platforms.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Financial Services",
+    description: "Secure fintech solutions built for regulatory environments.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Resources & Energy",
+    description: "Asset management, IoT integration, and operational tools for field teams.",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Government & Public Sector",
+    description: "Civic platforms and digital services built to earn public trust.",
+    image: "https://images.unsplash.com/photo-1568219656418-15c329312bf1?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Retail & E-Commerce",
+    description: "End-to-end commerce platforms and personalisation engines that convert.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Education",
+    description: "Learning platforms and administration systems that grow with enrolment.",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

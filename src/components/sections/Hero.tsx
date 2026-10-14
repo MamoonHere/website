@@ -11,20 +11,22 @@ export default function Hero() {
                  lg:flex-row lg:h-[calc(100svh-5rem)]"
       aria-label="Hero"
     >
-      <WaveRings />
       <div className="
         relative flex-shrink-0 flex items-center justify-center
         pt-8 pb-4 px-8
         lg:w-[38%] lg:px-10 lg:pt-0 lg:pb-16
       ">
         <LogoMark bodyFill="white" accentFill="#12D9DE" size={220} className="lg:hidden" />
-        <LogoMark
-          bodyFill="white"
-          accentFill="#12D9DE"
-          width={1024}
-          height={1190}
-          className="hidden lg:block lg:w-full lg:h-auto"
-        />
+        <div className="relative hidden lg:block w-full">
+          <WaveRings />
+          <LogoMark
+            bodyFill="white"
+            accentFill="#12D9DE"
+            width={1024}
+            height={1190}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="
@@ -96,7 +98,6 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 sm:gap-y-4 lg:gap-x-8 lg:gap-y-5">
             {TECH_LOGOS.map(({ name, src, filter }) => (
-              // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={name}
                 src={src}
