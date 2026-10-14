@@ -1,26 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PAIN_POINTS } from "@/constants";
 
+const TAB_DURATION = 5000;
+
 export default function PainPoints() {
   const [active, setActive] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const point = PAIN_POINTS[active];
+
+  const startTimer = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setActive(prev => (prev + 1) % PAIN_POINTS.length);
+    }, TAB_DURATION);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  const handleTabClick = (i: number) => {
+    setActive(i);
+    startTimer();
+  };
 
   return (
     <section className="bg-brand-bg-subtle py-28 lg:py-40">
       <div className="max-w-screen-xl mx-auto px-8 lg:px-16">
 
-        {/* Section header */}
         <div className="mb-16 lg:mb-24">
           <p className="font-body text-[11px] tracking-[0.35em] uppercase text-brand-primary mb-5">
             Challenges
           </p>
           <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
-                         text-4xl sm:text-5xl lg:text-6xl xl:text-[5.25rem]
-                         max-w-3xl">
+                         text-4xl sm:text-5xl lg:text-6xl xl:text-[5.25rem] max-w-3xl">
             What&apos;s holding your business back?
           </h2>
         </div>
@@ -32,15 +50,27 @@ export default function PainPoints() {
             {PAIN_POINTS.map((p, i) => (
               <li key={p.tab}>
                 <button
-                  onClick={() => setActive(i)}
-                  className={`group w-full text-left px-6 py-5 border-l-[3px] transition-all duration-200 ${
+                  onClick={() => handleTabClick(i)}
+                  className={`relative w-full text-left px-6 py-5 overflow-hidden transition-all duration-200 ${
                     active === i
-                      ? "border-brand-primary bg-brand-primary/5 text-brand-dark"
-                      : "border-neutral-200 text-neutral-400 hover:text-neutral-600 hover:border-neutral-300"
+                      ? "bg-brand-primary/5 text-brand-dark"
+                      : "text-neutral-400 hover:text-neutral-600"
                   }`}
                 >
-                  <span className="font-heading font-semibold text-[14px] lg:text-[15px] tracking-[0.06em]">
-                    {p.tab}
+                  <span className="absolute left-0 top-0 w-[3px] h-full bg-neutral-200" />
+                  {active === i && (
+                    <span
+                      className="absolute left-0 top-0 w-[3px] bg-brand-primary"
+                      style={{ animation: `tab-progress ${TAB_DURATION}ms linear forwards` }}
+                    />
+                  )}
+                  <span className="relative flex items-center gap-3">
+                    <span className="font-mono text-[10px] text-neutral-300 shrink-0 tabular-nums">
+                      0{i + 1}
+                    </span>
+                    <span className="font-heading font-semibold text-[13px] lg:text-[14px] tracking-[0.06em]">
+                      {p.tab}
+                    </span>
                   </span>
                 </button>
               </li>
@@ -55,16 +85,15 @@ export default function PainPoints() {
           >
             {/* Text */}
             <div className="flex-1 flex flex-col justify-center xl:py-4">
-              <span className="font-heading font-bold text-brand-primary
-                               text-[11px] tracking-[0.4em] uppercase mb-6 block">
+              <span className="font-heading font-bold text-brand-primary text-[11px] tracking-[0.4em] uppercase mb-6 block">
                 0{active + 1}
               </span>
-              <h3 className="font-heading font-bold text-brand-dark leading-[1.1] mb-6
+              <h3 className="font-heading font-bold text-brand-dark leading-[1.1] mb-8
                              text-3xl sm:text-4xl lg:text-[2.75rem]">
                 {point.headline}
               </h3>
-              <p className="font-body text-neutral-500 leading-[1.85] mb-10
-                            text-base lg:text-[1.1rem] max-w-lg">
+              <p className="font-heading font-light text-neutral-400 leading-[1.65] mb-10
+                            text-2xl lg:text-[1.75rem] max-w-sm">
                 {point.description}
               </p>
               <Link
@@ -81,16 +110,17 @@ export default function PainPoints() {
             </div>
 
             {/* Image */}
-            <div className="xl:w-[46%] shrink-0">
+            <div className="xl:w-[46%] shrink-0 group">
               <div className="relative h-64 sm:h-80 xl:h-full min-h-[380px] rounded-2xl overflow-hidden
                               shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
                 <Image
                   src={point.image}
                   alt={point.headline}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 1280px) 100vw, 46vw"
                 />
+                <div className="absolute inset-0 bg-brand-primary/10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
             </div>
