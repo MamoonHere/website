@@ -31,7 +31,7 @@ export default function PainPoints() {
 
   return (
     <section className="bg-brand-bg-subtle py-28 lg:py-40">
-      <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+      <div className="max-w-screen-2xl mx-auto px-8 lg:px-20">
 
         <div className="mb-16 lg:mb-24">
           <p className="font-body text-[11px] tracking-[0.35em] uppercase text-brand-primary mb-5">
