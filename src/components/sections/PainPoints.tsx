@@ -32,70 +32,73 @@ export default function PainPoints() {
   return (
     <section className="bg-brand-bg-subtle py-28 lg:py-40">
       <div className="max-w-screen-2xl mx-auto px-8 lg:px-20">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
 
-        <div className="mb-16 lg:mb-24">
-          <p className="font-body text-[11px] tracking-[0.35em] uppercase text-brand-primary mb-5">
-            Challenges
-          </p>
-          <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
-                         text-4xl sm:text-5xl lg:text-6xl xl:text-[5.25rem] max-w-3xl">
-            What&apos;s holding your business back?
-          </h2>
-        </div>
+          {/* Left column — heading + tabs */}
+          <div className="lg:w-[30%] shrink-0 flex flex-col">
+            <p className="font-body text-[11px] tracking-[0.35em] uppercase text-brand-primary mb-5">
+              Challenges
+            </p>
+            <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
+                           text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem] mb-12">
+              What&apos;s holding your business back?
+            </h2>
 
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
-
-          {/* Tab list */}
-          <ul className="flex flex-col lg:w-[30%] shrink-0 self-start lg:sticky lg:top-28" role="list">
-            {PAIN_POINTS.map((p, i) => (
-              <li key={p.tab}>
-                <button
-                  onClick={() => handleTabClick(i)}
-                  className={`relative w-full text-left px-6 py-5 overflow-hidden transition-all duration-200 ${
-                    active === i
-                      ? "bg-brand-primary/[0.12] text-brand-dark"
-                      : "text-neutral-400 hover:text-neutral-600"
-                  }`}
-                >
-                  <span className="absolute left-0 top-0 w-[3px] h-full bg-neutral-200" />
-                  {active === i && (
-                    <span
-                      className="absolute left-0 top-0 w-[3px] bg-brand-primary"
-                      style={{ animation: `tab-progress ${TAB_DURATION}ms linear forwards` }}
-                    />
-                  )}
-                  <span className="relative flex items-center gap-3">
-                    <span className="font-mono text-[10px] text-neutral-300 shrink-0 tabular-nums">
-                      0{i + 1}
+            <ul className="flex flex-col" role="list">
+              {PAIN_POINTS.map((p, i) => (
+                <li key={p.tab}>
+                  <button
+                    onClick={() => handleTabClick(i)}
+                    className={`relative w-full text-left px-6 py-5 overflow-hidden transition-all duration-200 ${
+                      active === i
+                        ? "bg-brand-primary/[0.12] text-brand-dark"
+                        : "text-neutral-400 hover:text-neutral-600"
+                    }`}
+                  >
+                    <span className="absolute left-0 top-0 w-[3px] h-full bg-neutral-200" />
+                    {active === i && (
+                      <span
+                        className="absolute left-0 top-0 w-[3px] bg-brand-primary"
+                        style={{ animation: `tab-progress ${TAB_DURATION}ms linear forwards` }}
+                      />
+                    )}
+                    <span className="relative flex items-center gap-3">
+                      <span className="font-mono text-[10px] text-neutral-300 shrink-0 tabular-nums">
+                        0{i + 1}
+                      </span>
+                      <span className="font-heading font-semibold text-[13px] lg:text-[14px] tracking-[0.06em]">
+                        {p.tab}
+                      </span>
                     </span>
-                    <span className="font-heading font-semibold text-[13px] lg:text-[14px] tracking-[0.06em]">
-                      {p.tab}
-                    </span>
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          {/* Content panel */}
+          {/* Right column — content panel */}
           <div
             key={active}
-            className="flex-1 flex flex-col xl:flex-row gap-10 xl:gap-14 animate-hero-fade-up"
+            className="flex-1 flex flex-col xl:flex-row gap-10 xl:gap-12 animate-hero-fade-up"
             style={{ animationDuration: "0.35s" }}
           >
             {/* Text */}
             <div className="flex-1 flex flex-col justify-center xl:py-4">
-              <span className="font-heading font-bold text-brand-primary text-[11px] tracking-[0.4em] uppercase mb-6 block">
-                0{active + 1}
-              </span>
-              <h3 className="font-heading font-bold text-brand-dark leading-[1.1] mb-8
-                             text-3xl sm:text-4xl lg:text-[2.75rem]">
+              <h3 className="font-heading font-bold text-brand-dark leading-[1.1] mb-4
+                             text-3xl sm:text-4xl lg:text-[2.5rem]">
                 {point.headline}
               </h3>
-              <p className="font-heading font-light text-neutral-400 leading-[1.65] mb-10
-                            text-2xl lg:text-[1.75rem] max-w-sm">
+              <p className="font-body text-neutral-500 leading-relaxed mb-6 text-base lg:text-lg">
                 {point.description}
               </p>
+              <ul className="flex flex-col gap-3 mb-10">
+                {point.points.map(pt => (
+                  <li key={pt} className="flex items-start gap-3">
+                    <span className="mt-[0.45em] w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0" />
+                    <span className="font-body text-neutral-500 text-sm lg:text-[15px] leading-snug">{pt}</span>
+                  </li>
+                ))}
+              </ul>
               <Link
                 href={point.cta.href}
                 className="self-start inline-flex items-center font-heading font-bold

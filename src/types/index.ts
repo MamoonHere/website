@@ -13,6 +13,7 @@ export interface PainPoint {
   tab: string;
   headline: string;
   description: string;
+  points: string[];
   image: string;
   cta: { label: string; href: string };
 }
