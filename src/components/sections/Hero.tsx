@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/ui";
+import { WaveRings } from "@/components/layout";
 import { SERVICE_TAGS, TECH_LOGOS } from "@/constants";
 
 export default function Hero() {
@@ -16,13 +17,16 @@ export default function Hero() {
         lg:w-[38%] lg:px-10 lg:pt-0 lg:pb-16
       ">
         <LogoMark bodyFill="white" accentFill="#12D9DE" size={220} className="lg:hidden" />
-        <LogoMark
-          bodyFill="white"
-          accentFill="#12D9DE"
-          width={1024}
-          height={1190}
-          className="hidden lg:block lg:w-full lg:h-auto"
-        />
+        <div className="relative hidden lg:block w-full">
+          <WaveRings />
+          <LogoMark
+            bodyFill="white"
+            accentFill="#12D9DE"
+            width={1024}
+            height={1190}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="
@@ -94,7 +98,6 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 sm:gap-y-4 lg:gap-x-8 lg:gap-y-5">
             {TECH_LOGOS.map(({ name, src, filter }) => (
-              // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={name}
                 src={src}
