@@ -10,8 +10,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => { setMobileOpen(false); }, [pathname]);
-
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -89,6 +87,7 @@ export default function Navbar() {
               <li key={href}>
                 <Link
                   href={href}
+                  onClick={() => setMobileOpen(false)}
                   className={`font-heading font-semibold text-sm tracking-[0.18em] transition-all duration-200 ${
                     active
                       ? "text-brand-primary drop-shadow-[0_0_8px_rgba(18,217,222,0.5)]"
@@ -103,6 +102,7 @@ export default function Navbar() {
           <li className="pt-3 border-t border-white/10">
             <Link
               href="/contact"
+              onClick={() => setMobileOpen(false)}
               className="inline-flex items-center gap-3 font-heading font-bold text-[12px] tracking-[0.15em]
                          px-6 py-3 rounded-md bg-brand-primary text-brand-dark
                          hover:bg-brand-primary-hover transition-all duration-200"
