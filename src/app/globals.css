@@ -53,6 +53,11 @@
   animation: text-shimmer 5s linear infinite;
 }
 
+@keyframes scroll-dot {
+  from { transform: translateY(-16px); }
+  to   { transform: translateY(40px); }
+}
+
 @keyframes wave-ring {
   0%   { box-shadow: 0 0 20px 0px    rgba(18, 217, 222, 0.45); opacity: 1; }
   100% { box-shadow: 0 0 60px 1600px rgba(18, 217, 222, 0);    opacity: 0; }

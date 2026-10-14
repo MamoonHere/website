@@ -110,6 +110,14 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-7 left-1/2 -translate-x-1/2">
+        <div className="relative w-0.5 h-10 bg-white/10 overflow-hidden rounded-full">
+          <div
+            className="absolute inset-x-0 top-0 h-4 bg-brand-primary rounded-full"
+            style={{ animation: "scroll-dot 1.8s ease-in infinite" }}
+          />
+        </div>
+      </div>
     </section>
   );
 }
