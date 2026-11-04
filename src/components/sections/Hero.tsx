@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoMark } from "@/components/ui";
+import { LogoMark, ScrollAnchor } from "@/components/ui";
 import { WaveRings } from "@/components/layout";
 import { TECH_LOGOS } from "@/constants";
 
@@ -77,17 +77,17 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="animate-hero-fade-up [animation-delay:550ms]">
-          <Link
-            href="#social-impact"
+        <div className="mb-10 animate-hero-fade-up [animation-delay:550ms]">
+          <ScrollAnchor
+            targetId="social-impact"
             className="group inline-flex items-center gap-3"
           >
             <span className="w-5 h-px bg-brand-primary shrink-0
                              group-hover:w-8 transition-all duration-300" />
-            <span className="font-body text-[15px] text-white/55
+            <span className="font-body text-lg text-white/55
                              group-hover:text-white/90 transition-colors duration-200">
               Non-profit or education?{" "}
-              <span className="text-brand-primary font-medium">
+              <span className="text-white font-semibold">
                 We have dedicated rates.
               </span>
             </span>
@@ -98,7 +98,7 @@ export default function Hero() {
             >
               ↓
             </span>
-          </Link>
+          </ScrollAnchor>
         </div>
 
         <div className="animate-hero-fade-up [animation-delay:700ms]">
