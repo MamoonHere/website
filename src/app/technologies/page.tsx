@@ -94,6 +94,11 @@ export default function TechnologiesPage() {
       <PageHero
         headline={<>The stack behind<br />every build.</>}
         description="Tools are chosen for production reliability, not for the pitch deck. These are the technologies we trust with real client workloads."
+        image={{
+          src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+          alt: "Circuit board macro — the hardware behind modern software",
+          className: "relative h-64 w-64 sm:h-72 sm:w-72 lg:h-[400px] lg:w-[400px] shrink-0 self-center rounded-full overflow-hidden animate-hero-fade-up [animation-delay:300ms]",
+        }}
       />
 
       <section className="bg-[#0a0a0a] py-28 lg:py-40">

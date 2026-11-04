@@ -79,6 +79,11 @@ export default function ServicesPage() {
       <PageHero
         headline={<>What we build,<br />and how we build it.</>}
         description="Eight core practices, one integrated team. The same senior engineers who scope your project design, build, test, and ship it — with no handoffs in between."
+        image={{
+          src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80",
+          alt: "Developer working at a monitor with colourful code",
+          className: "relative h-64 sm:h-80 lg:h-[520px] lg:w-[36%] shrink-0 self-center rounded-[2rem] overflow-hidden animate-hero-fade-up [animation-delay:300ms]",
+        }}
       />
 
       <section className="bg-brand-bg-subtle py-28 lg:py-40">

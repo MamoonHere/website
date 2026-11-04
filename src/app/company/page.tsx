@@ -47,6 +47,12 @@ export default function CompanyPage() {
       <PageHero
         headline={<>Engineering-led.<br />Principal-delivered.</>}
         description="We're a small firm by design. The people you meet are the people who build — and we're invested in what comes next with you, not just what ships next sprint."
+        image={{
+          src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+          alt: "Team collaborating around a table",
+          className: "relative h-64 sm:h-80 lg:h-[480px] lg:w-[42%] shrink-0 self-center overflow-hidden animate-hero-fade-up [animation-delay:300ms]",
+          style: { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+        }}
       />
 
       <section className="bg-brand-bg-subtle py-28 lg:py-40">

@@ -59,6 +59,12 @@ export default function AiAuditStrategyPage() {
         headline={<>Find where AI earns<br />its place in your business.</>}
         description="Most AI projects fail not because the technology doesn't work — but because nobody mapped it to a workflow that actually needed it. We fix that before you spend a dollar on build."
         cta={{ label: "BOOK A FREE DISCOVERY CALL", href: "/contact" }}
+        image={{
+          src: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=80",
+          alt: "AI and data visualisation",
+          className: "relative h-64 sm:h-80 lg:h-auto lg:self-stretch lg:w-[44%] xl:w-[46%] shrink-0 overflow-hidden animate-hero-fade-up [animation-delay:300ms]",
+          style: { clipPath: "polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)" },
+        }}
       />
 
       <section className="bg-brand-bg-subtle py-28 lg:py-40">

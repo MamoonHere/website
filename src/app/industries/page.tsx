@@ -15,6 +15,11 @@ export default function IndustriesPage() {
       <PageHero
         headline={<>Sector expertise that<br />shows up in the work.</>}
         description="Generic software can be bought off the shelf. We build for the compliance requirements, operational constraints, and regulatory environments of your specific sector."
+        image={{
+          src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+          alt: "Modern city skyline representing diverse industries",
+          className: "relative h-56 sm:h-72 lg:h-auto lg:self-stretch lg:w-[44%] xl:w-[46%] shrink-0 overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl animate-hero-fade-up [animation-delay:300ms]",
+        }}
       />
 
       <section className="bg-brand-bg-subtle py-28 lg:py-40">
