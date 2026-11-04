@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import { Navbar, WaveRings } from "@/components/layout";
+import { Navbar, Footer } from "@/components/layout";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "First Nations Digital",
   description: "First Nations Digital — company website",
+  icons: { icon: "/logo.svg" },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -29,9 +30,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <WaveRings />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="relative sticky top-0 z-50 border-b border-white/10 backdrop-blur-md"
+      className="relative sticky top-0 z-50 backdrop-blur-md"
       style={{ background: "rgba(8, 8, 8, 0.80)" }}
       aria-label="Main navigation"
     >
@@ -47,8 +47,7 @@ export default function Navbar() {
           href="/contact"
           className="inline-flex items-center gap-3 font-heading font-bold text-[13px] tracking-[0.15em]
                      px-6 py-2.5 rounded-md bg-brand-primary text-brand-dark
-                     shadow-[0_0_18px_rgba(18,217,222,0.25)]
-                     hover:bg-brand-primary-hover hover:shadow-[0_0_28px_rgba(18,217,222,0.5)]
+                     hover:bg-brand-primary-hover
                      transition-all duration-200"
         >
           CONTACT US
@@ -77,7 +76,7 @@ export default function Navbar() {
 
       <div
         id="mobile-menu"
-        className={`xl:hidden fixed inset-x-0 top-20 z-40 overflow-hidden backdrop-blur-md border-b border-white/10 transition-[max-height] duration-300 ease-in-out ${mobileOpen ? "max-h-screen" : "max-h-0"}`}
+        className={`xl:hidden fixed inset-x-0 top-20 z-40 overflow-hidden backdrop-blur-md transition-[max-height] duration-300 ease-in-out ${mobileOpen ? "max-h-screen" : "max-h-0"}`}
         style={{ background: "rgba(8, 8, 8, 0.95)" }}
       >
         <ul className="flex flex-col px-6 py-6 gap-5" role="list">
@@ -99,7 +98,7 @@ export default function Navbar() {
               </li>
             );
           })}
-          <li className="pt-3 border-t border-white/10">
+          <li className="pt-3">
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
