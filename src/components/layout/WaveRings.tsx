@@ -1,24 +1,26 @@
-const ANIMATION_DELAYS = [0, -6, -12, -18];
+const RING_COUNT = 4;
+const DURATION = 20;
+const STAGGER = 5;
 
 export default function WaveRings() {
   return (
     <>
-      {ANIMATION_DELAYS.map((delay, i) => (
+      {Array.from({ length: RING_COUNT }).map((_, i) => (
         <span
           key={i}
           aria-hidden
           style={{
             position: "absolute",
-            width: "4px",
-            height: "4px",
+            width: "6px",
+            height: "6px",
             borderRadius: "50%",
-            top: "32%",
+            top: "33%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            zIndex: 0,
+            zIndex: 10,
             pointerEvents: "none",
-            animation: "wave-ring 24s ease-out infinite",
-            animationDelay: `${delay}s`,
+            animation: `wave-ring ${DURATION}s ease-out infinite`,
+            animationDelay: `${i * STAGGER}s`,
           }}
         />
       ))}

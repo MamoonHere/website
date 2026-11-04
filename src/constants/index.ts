@@ -131,15 +131,17 @@ export const INDUSTRIES: Industry[] = [
   {
     name: "Education",
     description: "Learning platforms and administration systems that grow with enrolment.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
 export const TECH_LOGOS: TechLogo[] = [
-  { name: "React",      src: "https://api.iconify.design/logos:react.svg?width=120&height=120" },
-  { name: "Next.js",    src: "https://api.iconify.design/logos:nextjs-icon.svg?width=120&height=120" },
-  { name: "TypeScript", src: "https://api.iconify.design/logos:typescript-icon.svg?width=120&height=120" },
-  { name: "AWS",        src: "https://api.iconify.design/logos:aws.svg?width=120&height=120", filter: "invert(1) hue-rotate(180deg)" },
-  { name: "OpenAI",     src: "https://api.iconify.design/simple-icons:openai.svg?color=white&width=120&height=120" },
-  { name: "Azure",      src: "https://api.iconify.design/logos:microsoft-azure.svg?width=120&height=120" },
+  { name: "React",      src: "https://api.iconify.design/logos/react.svg?width=120&height=120" },
+  { name: "Next.js",    src: "https://api.iconify.design/logos/nextjs-icon.svg?width=120&height=120" },
+  { name: "TypeScript", src: "https://api.iconify.design/logos/typescript-icon.svg?width=120&height=120" },
+  { name: "Python",     src: "https://api.iconify.design/logos/python.svg?width=120&height=120" },
+  { name: "AWS",        src: "https://api.iconify.design/logos/aws.svg?width=120&height=120", filter: "invert(1) hue-rotate(180deg)" },
+  { name: "OpenAI",     src: "https://api.iconify.design/simple-icons/openai.svg?color=white&width=120&height=120" },
+  { name: "Azure",      src: "https://api.iconify.design/logos/microsoft-azure.svg?width=120&height=120" },
+  { name: "Docker",     src: "https://api.iconify.design/logos/docker-icon.svg?width=120&height=120" },
 ];

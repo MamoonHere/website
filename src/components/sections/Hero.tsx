@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/ui";
+import { WaveRings } from "@/components/layout";
+import { TECH_LOGOS } from "@/constants";
 
 export default function Hero() {
   return (
     <section
-      className="relative flex overflow-hidden
-                 flex-col min-h-[calc(100svh-5rem)]
+      className="relative flex flex-col min-h-[calc(100svh-5rem)]
                  lg:flex-row lg:h-[calc(100svh-5rem)]"
       aria-label="Hero"
     >
@@ -15,7 +16,8 @@ export default function Hero() {
         lg:w-[38%] lg:px-10 lg:pt-0 lg:pb-16
       ">
         <LogoMark bodyFill="white" accentFill="#12D9DE" size={220} className="lg:hidden" />
-        <div className="hidden lg:block w-full">
+        <div className="relative hidden lg:block w-full">
+          <WaveRings />
           <LogoMark
             bodyFill="white"
             accentFill="#12D9DE"
@@ -34,17 +36,17 @@ export default function Hero() {
         2xl:pr-20
       ">
         <h1
-          className="font-heading font-bold text-white leading-[1.08] mb-6
-                     text-3xl sm:text-4xl md:text-5xl xl:text-[4rem] 2xl:text-[4.75rem]
+          className="font-heading font-bold text-white leading-[0.92] mb-8
+                     text-5xl sm:text-6xl md:text-7xl xl:text-[7.5rem] 2xl:text-[9rem]
                      animate-hero-fade-up [animation-delay:150ms]"
         >
           Your Goals.<br />
-          <span className="text-brand-primary">Engineered for Growth</span>
+          <span className="text-brand-primary">Engineered.</span>
         </h1>
 
         <p
           className="font-body text-white/70 leading-relaxed max-w-lg mb-10
-                     text-base sm:text-lg xl:text-[1.15rem]
+                     text-lg xl:text-[1.15rem]
                      animate-hero-fade-up [animation-delay:300ms]"
         >
           We turn ambitious ideas into scalable software, intelligent AI
@@ -53,7 +55,7 @@ export default function Hero() {
           next with you.
         </p>
 
-        <div className="flex flex-wrap gap-3 sm:gap-4 animate-hero-fade-up [animation-delay:450ms]">
+        <div className="flex flex-wrap gap-3 sm:gap-4 mb-10 animate-hero-fade-up [animation-delay:450ms]">
           <Link
             href="/services"
             className="inline-flex items-center gap-2 font-heading font-bold
@@ -73,6 +75,24 @@ export default function Hero() {
           >
             AI FOR YOU
           </Link>
+        </div>
+
+        <div className="animate-hero-fade-up [animation-delay:600ms]">
+          <p className="font-body text-base text-white/40 mb-5">Build with</p>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4 sm:gap-x-10 lg:gap-x-12">
+            {TECH_LOGOS.map(({ name, src, filter }) => (
+              <img
+                key={name}
+                src={src}
+                alt={name}
+                style={filter ? { filter } : undefined}
+                className="h-7 w-auto sm:h-9 lg:h-11 transition-transform duration-200 hover:scale-110"
+              />
+            ))}
+            <span className="font-body text-base text-white/45 italic">
+              & many more
+            </span>
+          </div>
         </div>
       </div>
 

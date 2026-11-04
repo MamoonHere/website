@@ -30,10 +30,12 @@ export default function Footer() {
       <section className="bg-[#0a0a0a] py-28 lg:py-40">
         <div className="max-w-screen-2xl mx-auto px-8 lg:px-20 text-center">
           <h2 className="font-heading font-bold text-white leading-[1.02]
-                         text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] mb-6">
+                         text-4xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] mb-6
+                         animate-hero-fade-up [animation-delay:100ms]">
             Ready to build<br />what&apos;s next?
           </h2>
-          <p className="font-body text-white/55 text-lg lg:text-xl leading-relaxed max-w-xl mx-auto mb-10">
+          <p className="font-body text-white/60 text-lg lg:text-xl leading-relaxed max-w-xl mx-auto mb-10
+                        animate-hero-fade-up [animation-delay:250ms]">
             We partner with ambitious teams to turn complex problems into polished, scalable digital products.
           </p>
           <Link
@@ -49,7 +51,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <footer className="bg-[#060606] border-t border-white/[0.06]">
+      <footer className="bg-[#060606]">
         <div className="max-w-screen-2xl mx-auto px-8 lg:px-20 pt-20 pb-10 lg:pt-24 lg:pb-12">
 
           <div className="grid grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-16 lg:mb-20">
@@ -60,7 +62,7 @@ export default function Footer() {
                 accentFill="#12D9DE"
                 className="h-52 w-auto mb-5"
               />
-              <p className="font-body text-white/40 text-sm leading-relaxed mb-8 max-w-[280px]">
+              <p className="font-body text-white/45 text-base leading-relaxed mb-8 max-w-[280px]">
                 Engineering-led digital transformation for ambitious organisations.
               </p>
               <div className="flex items-center gap-3">
@@ -82,8 +84,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-heading font-semibold text-[11px] tracking-[0.3em] uppercase
-                             text-white/25 mb-6">
+              <h3 className="font-body text-[13px] font-semibold text-white/40 mb-6">
                 Services
               </h3>
               <ul className="flex flex-col gap-3.5">
@@ -91,7 +92,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className="font-body text-[14px] text-white/50 hover:text-brand-primary
+                      className="font-body text-base text-white/55 hover:text-brand-primary
                                  transition-colors duration-200"
                     >
                       {label}
@@ -102,8 +103,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-heading font-semibold text-[11px] tracking-[0.3em] uppercase
-                             text-white/25 mb-6">
+              <h3 className="font-body text-[13px] font-semibold text-white/40 mb-6">
                 Company
               </h3>
               <ul className="flex flex-col gap-3.5">
@@ -111,7 +111,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className="font-body text-[14px] text-white/50 hover:text-brand-primary
+                      className="font-body text-base text-white/55 hover:text-brand-primary
                                  transition-colors duration-200"
                     >
                       {label}
@@ -122,15 +122,14 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-heading font-semibold text-[11px] tracking-[0.3em] uppercase
-                             text-white/25 mb-6">
+              <h3 className="font-body text-[13px] font-semibold text-white/40 mb-6">
                 Get in touch
               </h3>
               <ul className="flex flex-col gap-3.5">
                 <li>
                   <a
                     href="mailto:hello@firstnationsdigital.com.au"
-                    className="font-body text-[14px] text-white/50 hover:text-brand-primary
+                    className="font-body text-base text-white/55 hover:text-brand-primary
                                transition-colors duration-200 break-all"
                   >
                     hello@firstnationsdigital.com.au
@@ -139,7 +138,7 @@ export default function Footer() {
                 <li className="pt-1">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 font-body text-[14px]
+                    className="inline-flex items-center gap-2 font-body text-base
                                text-white/50 hover:text-brand-primary transition-colors duration-200 group"
                   >
                     Book a discovery call
@@ -151,7 +150,7 @@ export default function Footer() {
 
           </div>
 
-          <div className="border-t border-white/[0.06] pt-8 flex flex-col sm:flex-row
+          <div className="pt-8 flex flex-col sm:flex-row
                           items-start sm:items-center justify-between gap-4">
             <p className="font-body text-[13px] text-white/20 flex items-center gap-2.5">
               © {new Date().getFullYear()}

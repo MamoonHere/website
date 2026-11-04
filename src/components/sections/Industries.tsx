@@ -9,7 +9,8 @@ export default function Industries() {
 
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 lg:mb-20">
           <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
-                         text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem]">
+                         text-3xl sm:text-5xl lg:text-5xl xl:text-[3.5rem]
+                         animate-hero-fade-up [animation-delay:100ms]">
             Deep expertise<br />across key sectors
           </h2>
           <Link
@@ -22,7 +23,8 @@ export default function Industries() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5
+                        animate-hero-fade-up [animation-delay:200ms]">
           {INDUSTRIES.map((industry) => (
             <Link
               key={industry.name}
@@ -43,7 +45,7 @@ export default function Industries() {
                                leading-tight mb-2 group-hover:text-brand-primary transition-colors duration-200">
                   {industry.name}
                 </h3>
-                <p className="font-body text-white/55 text-[14px] lg:text-[15px] leading-snug">
+                <p className="font-body text-white/55 text-base leading-snug">
                   {industry.description}
                 </p>
               </div>

@@ -42,6 +42,11 @@
   to   { transform: translateY(40px); }
 }
 
+@keyframes wave-ring {
+  0%   { box-shadow: 0 0 0 0px   rgba(18, 217, 222, 0.65); opacity: 1; }
+  100% { box-shadow: 0 0 0 600px rgba(18, 217, 222, 0);    opacity: 0; }
+}
+
 body {
   background: linear-gradient(to right, var(--brand-surface), var(--brand-surface-end));
   min-height: 100svh;

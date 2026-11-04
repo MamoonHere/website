@@ -8,7 +8,8 @@ export default function Services() {
 
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 lg:mb-20">
           <h2 className="font-heading font-bold text-white leading-[1.05]
-                         text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem]">
+                         text-3xl sm:text-5xl lg:text-5xl xl:text-[3.5rem]
+                         animate-hero-fade-up [animation-delay:100ms]">
             Built to move<br />your business forward
           </h2>
           <Link
@@ -21,14 +22,13 @@ export default function Services() {
           </Link>
         </div>
 
-        <ul className="flex flex-col">
+        <ul className="flex flex-col animate-hero-fade-up [animation-delay:200ms]">
           {SERVICE_CARDS.map((service) => (
             <li key={service.name}>
               <Link
                 href={service.href}
-                className="group flex items-center gap-6 lg:gap-12 py-8 lg:py-10 px-4 lg:px-6
-                           -mx-4 lg:-mx-6 rounded-xl transition-colors duration-200 hover:bg-white/[0.04]
-                           border-t border-white/[0.06]"
+                className="group flex items-center gap-6 lg:gap-12 py-9 lg:py-11 px-4 lg:px-6
+                           -mx-4 lg:-mx-6 rounded-xl transition-colors duration-200 hover:bg-white/[0.04]"
               >
                 <span className="font-heading font-bold text-white leading-tight
                                  text-xl sm:text-2xl lg:text-[1.75rem]
@@ -37,7 +37,7 @@ export default function Services() {
                   {service.name}
                 </span>
 
-                <span className="hidden lg:block font-body text-white/55 text-[15px]
+                <span className="hidden lg:block font-body text-white/60 text-base
                                  leading-relaxed lg:w-[40%] xl:w-[44%] shrink-0">
                   {service.description}
                 </span>
@@ -50,7 +50,6 @@ export default function Services() {
               </Link>
             </li>
           ))}
-          <li className="border-t border-white/[0.06]" />
         </ul>
 
       </div>

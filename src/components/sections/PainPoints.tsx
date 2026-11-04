@@ -34,10 +34,11 @@ export default function PainPoints() {
       <div className="max-w-screen-2xl mx-auto px-8 lg:px-20">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
 
-          <div className="lg:w-[30%] shrink-0 flex flex-col">
+          <div className="lg:w-[38%] shrink-0 flex flex-col">
             <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
-                           text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem] mb-12">
-              What&apos;s holding your business back?
+                           text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem] mb-12
+                           animate-hero-fade-up [animation-delay:100ms]">
+              What&apos;s holding you back?
             </h2>
 
             <ul className="flex flex-col" role="list">
@@ -58,7 +59,7 @@ export default function PainPoints() {
                         style={{ animation: `tab-progress ${TAB_DURATION}ms linear forwards` }}
                       />
                     )}
-                    <span className="relative font-heading font-semibold text-[14px] lg:text-[15px]">
+                    <span className="relative font-heading font-semibold text-[15px]">
                       {p.tab}
                     </span>
                   </button>
