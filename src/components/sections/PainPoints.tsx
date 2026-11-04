@@ -34,11 +34,7 @@ export default function PainPoints() {
       <div className="max-w-screen-2xl mx-auto px-8 lg:px-20">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
 
-          {/* Left column — heading + tabs */}
           <div className="lg:w-[30%] shrink-0 flex flex-col">
-            <p className="font-body text-[13px] tracking-[0.35em] uppercase text-brand-primary mb-5">
-              Challenges
-            </p>
             <h2 className="font-heading font-bold text-brand-dark leading-[1.05]
                            text-4xl sm:text-5xl lg:text-5xl xl:text-[3.5rem] mb-12">
               What&apos;s holding your business back?
@@ -51,8 +47,8 @@ export default function PainPoints() {
                     onClick={() => handleTabClick(i)}
                     className={`relative w-full text-left px-6 py-5 overflow-hidden transition-all duration-200 ${
                       active === i
-                        ? "bg-brand-primary/[0.12] text-brand-dark"
-                        : "text-neutral-400 hover:text-neutral-600"
+                        ? "bg-brand-primary/[0.10] text-brand-dark"
+                        : "text-neutral-500 hover:text-neutral-700"
                     }`}
                   >
                     <span className="absolute left-0 top-0 w-[3px] h-full bg-neutral-200" />
@@ -62,13 +58,8 @@ export default function PainPoints() {
                         style={{ animation: `tab-progress ${TAB_DURATION}ms linear forwards` }}
                       />
                     )}
-                    <span className="relative flex items-center gap-3">
-                      <span className={`font-mono text-[13px] shrink-0 tabular-nums ${active === i ? "font-bold text-brand-primary" : "text-neutral-300"}`}>
-                        0{i + 1}
-                      </span>
-                      <span className="font-heading font-semibold text-[13px] lg:text-[14px] tracking-[0.06em]">
-                        {p.tab}
-                      </span>
+                    <span className="relative font-heading font-semibold text-[14px] lg:text-[15px]">
+                      {p.tab}
                     </span>
                   </button>
                 </li>
@@ -76,46 +67,41 @@ export default function PainPoints() {
             </ul>
           </div>
 
-          {/* Right column — content panel */}
           <div
             key={active}
             className="flex-1 flex flex-col xl:flex-row gap-10 xl:gap-12 animate-hero-fade-up"
             style={{ animationDuration: "0.35s" }}
           >
-            {/* Text */}
             <div className="flex-1 flex flex-col justify-center xl:py-4">
               <h3 className="font-heading font-bold text-brand-dark leading-[1.1] mb-4
                              text-3xl sm:text-4xl lg:text-[2.5rem]">
                 {point.headline}
               </h3>
-              <p className="font-body text-neutral-500 leading-relaxed mb-6 text-base lg:text-lg">
+              <p className="font-body text-neutral-600 leading-relaxed mb-6 text-base lg:text-lg">
                 {point.description}
               </p>
               <ul className="flex flex-col gap-3 mb-10">
                 {point.points.map(pt => (
                   <li key={pt} className="flex items-start gap-3">
                     <span className="mt-[0.45em] w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0" />
-                    <span className="font-body text-neutral-500 text-sm lg:text-[15px] leading-snug">{pt}</span>
+                    <span className="font-body text-neutral-600 text-base leading-snug">{pt}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 href={point.cta.href}
                 className="self-start inline-flex items-center gap-2 font-heading font-bold
-                           text-[12px] sm:text-[14px] tracking-[0.2em]
-                           px-5 py-3 sm:px-7 sm:py-4 rounded-md bg-brand-primary text-brand-dark
-                           shadow-[0_0_22px_rgba(18,217,222,0.35)]
-                           hover:bg-brand-primary-hover hover:shadow-[0_0_38px_rgba(18,217,222,0.6)]
+                           text-[13px] sm:text-[14px] tracking-[0.18em]
+                           px-6 py-3.5 sm:px-8 sm:py-4 rounded-md bg-brand-primary text-brand-dark
+                           hover:bg-brand-primary-hover
                            transition-all duration-300"
               >
                 {point.cta.label}
               </Link>
             </div>
 
-            {/* Image */}
             <div className="xl:w-[46%] shrink-0 group">
-              <div className="relative h-64 sm:h-80 xl:h-full min-h-[380px] rounded-2xl overflow-hidden
-                              shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
+              <div className="relative h-64 sm:h-80 xl:h-full min-h-[380px] rounded-2xl overflow-hidden">
                 <Image
                   src={point.image}
                   alt={point.headline}
@@ -123,8 +109,6 @@ export default function PainPoints() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 1280px) 100vw, 46vw"
                 />
-                <div className="absolute inset-0 bg-brand-primary/10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
             </div>
           </div>

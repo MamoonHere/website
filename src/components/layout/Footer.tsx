@@ -28,37 +28,24 @@ export default function Footer() {
   return (
     <>
       <section className="bg-[#0a0a0a] py-28 lg:py-40">
-        <div className="max-w-screen-2xl mx-auto px-8 lg:px-20">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 lg:gap-20">
-
-            <div className="lg:max-w-[60%]">
-              <p className="font-body text-[13px] tracking-[0.35em] uppercase text-brand-primary mb-5">
-                Start building
-              </p>
-              <h2 className="font-heading font-bold text-white leading-[1.02]
-                             text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] mb-6">
-                Ready to build<br />what&apos;s next?
-              </h2>
-              <p className="font-body text-white/45 text-lg lg:text-xl leading-relaxed">
-                We partner with ambitious teams to turn complex problems into polished, scalable digital products.
-              </p>
-            </div>
-
-            <div className="shrink-0">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 font-heading font-bold
-                           text-[12px] sm:text-[14px] tracking-[0.2em]
-                           px-5 py-3 sm:px-7 sm:py-4 rounded-md bg-brand-primary text-brand-dark
-                           shadow-[0_0_22px_rgba(18,217,222,0.35)]
-                           hover:bg-brand-primary-hover hover:shadow-[0_0_38px_rgba(18,217,222,0.6)]
-                           transition-all duration-300"
-              >
-                FREE DISCOVERY SESSION
-              </Link>
-            </div>
-
-          </div>
+        <div className="max-w-screen-2xl mx-auto px-8 lg:px-20 text-center">
+          <h2 className="font-heading font-bold text-white leading-[1.02]
+                         text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] mb-6">
+            Ready to build<br />what&apos;s next?
+          </h2>
+          <p className="font-body text-white/55 text-lg lg:text-xl leading-relaxed max-w-xl mx-auto mb-10">
+            We partner with ambitious teams to turn complex problems into polished, scalable digital products.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 font-heading font-bold
+                       text-[13px] sm:text-[14px] tracking-[0.18em]
+                       px-8 py-4 rounded-md bg-brand-primary text-brand-dark
+                       hover:bg-brand-primary-hover
+                       transition-all duration-300"
+          >
+            FREE DISCOVERY SESSION
+          </Link>
         </div>
       </section>
 
@@ -73,7 +60,7 @@ export default function Footer() {
                 accentFill="#12D9DE"
                 className="h-52 w-auto mb-5"
               />
-              <p className="font-body text-white/35 text-sm leading-relaxed mb-8 max-w-[280px]">
+              <p className="font-body text-white/40 text-sm leading-relaxed mb-8 max-w-[280px]">
                 Engineering-led digital transformation for ambitious organisations.
               </p>
               <div className="flex items-center gap-3">
@@ -104,7 +91,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className="font-body text-[14px] text-white/45 hover:text-brand-primary
+                      className="font-body text-[14px] text-white/50 hover:text-brand-primary
                                  transition-colors duration-200"
                     >
                       {label}
@@ -124,7 +111,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className="font-body text-[14px] text-white/45 hover:text-brand-primary
+                      className="font-body text-[14px] text-white/50 hover:text-brand-primary
                                  transition-colors duration-200"
                     >
                       {label}
@@ -143,7 +130,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:hello@firstnationsdigital.com.au"
-                    className="font-body text-[14px] text-white/45 hover:text-brand-primary
+                    className="font-body text-[14px] text-white/50 hover:text-brand-primary
                                transition-colors duration-200 break-all"
                   >
                     hello@firstnationsdigital.com.au
@@ -153,7 +140,7 @@ export default function Footer() {
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-2 font-body text-[14px]
-                               text-white/45 hover:text-brand-primary transition-colors duration-200 group"
+                               text-white/50 hover:text-brand-primary transition-colors duration-200 group"
                   >
                     Book a discovery call
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5">→</span>

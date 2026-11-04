@@ -47,8 +47,7 @@ export default function Navbar() {
           href="/contact"
           className="inline-flex items-center gap-3 font-heading font-bold text-[13px] tracking-[0.15em]
                      px-6 py-2.5 rounded-md bg-brand-primary text-brand-dark
-                     shadow-[0_0_18px_rgba(18,217,222,0.25)]
-                     hover:bg-brand-primary-hover hover:shadow-[0_0_28px_rgba(18,217,222,0.5)]
+                     hover:bg-brand-primary-hover
                      transition-all duration-200"
         >
           CONTACT US
