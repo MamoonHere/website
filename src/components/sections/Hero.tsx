@@ -80,20 +80,20 @@ export default function Hero() {
         <div className="animate-hero-fade-up [animation-delay:550ms]">
           <Link
             href="#social-impact"
-            className="inline-flex items-center gap-3 group"
+            className="group inline-flex items-center gap-3"
           >
-            <span className="inline-flex items-center font-heading font-bold text-[11px]
-                             tracking-[0.16em] uppercase px-3 py-1.5 rounded-full
-                             bg-brand-primary/15 border border-brand-primary/30 text-brand-primary">
-              Community Rates
-            </span>
-            <span className="font-body text-base text-white/70
-                             group-hover:text-white transition-colors duration-200">
-              For non-profits &amp; education
+            <span className="w-5 h-px bg-brand-primary shrink-0
+                             group-hover:w-8 transition-all duration-300" />
+            <span className="font-body text-[15px] text-white/55
+                             group-hover:text-white/90 transition-colors duration-200">
+              Non-profit or education?{" "}
+              <span className="text-brand-primary font-medium">
+                We have dedicated rates.
+              </span>
             </span>
             <span
               aria-hidden
-              className="text-white/40 group-hover:text-brand-primary
+              className="text-brand-primary/50 group-hover:text-brand-primary
                          group-hover:translate-y-0.5 inline-block transition-all duration-200"
             >
               ↓
@@ -102,7 +102,6 @@ export default function Hero() {
         </div>
 
         <div className="animate-hero-fade-up [animation-delay:700ms]">
-          <p className="font-body text-base text-white/40 mb-5">Build with</p>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-4 sm:gap-x-10 lg:gap-x-12">
             {TECH_LOGOS.map(({ name, src, filter }) => (
               <img
