@@ -107,31 +107,49 @@ export const INDUSTRIES: Industry[] = [
     name: "Healthcare",
     description: "Patient systems, clinical workflows, and compliance-ready platforms.",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Patient management systems", "Clinical workflow automation", "HIPAA-compliant data platforms", "Telehealth & remote care tools"],
   },
   {
     name: "Financial Services",
     description: "Secure fintech solutions built for regulatory environments.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Core banking integrations", "Regulatory compliance platforms", "Fraud detection systems", "Portfolio management tools"],
   },
   {
     name: "Resources & Energy",
     description: "Asset management, IoT integration, and operational tools for field teams.",
     image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Asset tracking & management", "Field operations platforms", "IoT data pipelines", "Safety compliance systems"],
   },
   {
     name: "Government & Public Sector",
     description: "Civic platforms and digital services built to earn public trust.",
     image: "https://images.unsplash.com/photo-1568219656418-15c329312bf1?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Citizen-facing service portals", "Case management systems", "Records digitisation", "Service delivery automation"],
   },
   {
     name: "Retail & E-Commerce",
     description: "End-to-end commerce platforms and personalisation engines that convert.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Custom commerce platforms", "Inventory & order management", "Personalisation engines", "Loyalty & analytics systems"],
   },
   {
     name: "Education",
     description: "Learning platforms and administration systems that grow with enrolment.",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Learning management systems", "Student information systems", "AI tutoring tools", "Enrolment automation"],
+  },
+  {
+    name: "Logistics & Supply Chain",
+    description: "Visibility, automation, and integration across the entire supply chain.",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    useCases: ["Real-time shipment tracking", "Warehouse management systems", "Route optimisation", "Supplier integration platforms"],
+  },
+  {
+    name: "Manufacturing",
+    description: "Production systems, quality control, and operational intelligence for the floor.",
+    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80",
+    useCases: ["MES & production tracking", "Quality control systems", "Predictive maintenance", "ERP modernisation"],
   },
 ];
 

@@ -1,6 +1,6 @@
 const RING_COUNT = 4;
-const DURATION = 20;
-const STAGGER = 5;
+const DURATION = 28;
+const STAGGER = 7;
 
 export default function WaveRings() {
   return (
@@ -20,7 +20,7 @@ export default function WaveRings() {
             zIndex: 10,
             pointerEvents: "none",
             animation: `wave-ring ${DURATION}s ease-out infinite`,
-            animationDelay: `${i * STAGGER}s`,
+            animationDelay: `${-(i * STAGGER)}s`,
           }}
         />
       ))}

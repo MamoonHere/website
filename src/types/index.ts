@@ -29,6 +29,7 @@ export interface Industry {
   name: string;
   description: string;
   image: string;
+  useCases?: string[];
 }
 
 export interface SeoMeta {
