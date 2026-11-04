@@ -1,4 +1,4 @@
-import { Hero, PainPoints, Services, Industries } from "@/components/sections";
+import { Hero, PainPoints, Services, Industries, SocialImpact } from "@/components/sections";
 
 export default function HomePage() {
   return (
@@ -7,6 +7,7 @@ export default function HomePage() {
       <PainPoints />
       <Services />
       <Industries />
+      <SocialImpact />
     </main>
   );
 }

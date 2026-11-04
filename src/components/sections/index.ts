@@ -3,3 +3,4 @@ export { default as PainPoints } from "./PainPoints";
 export { default as Services } from "./Services";
 export { default as Industries } from "./Industries";
 export { default as PageHero } from "./PageHero";
+export { default as SocialImpact } from "./SocialImpact";

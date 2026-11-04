@@ -77,7 +77,18 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="animate-hero-fade-up [animation-delay:600ms]">
+        <div className="animate-hero-fade-up [animation-delay:550ms]">
+          <Link
+            href="#social-impact"
+            className="inline-flex items-center gap-2 font-body text-[13px] text-white/40
+                       hover:text-brand-primary transition-colors duration-200"
+          >
+            Community rates for non-profits &amp; education
+            <span aria-hidden>↓</span>
+          </Link>
+        </div>
+
+        <div className="animate-hero-fade-up [animation-delay:700ms]">
           <p className="font-body text-base text-white/40 mb-5">Build with</p>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-4 sm:gap-x-10 lg:gap-x-12">
             {TECH_LOGOS.map(({ name, src, filter }) => (
