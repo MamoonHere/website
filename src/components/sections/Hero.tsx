@@ -80,11 +80,24 @@ export default function Hero() {
         <div className="animate-hero-fade-up [animation-delay:550ms]">
           <Link
             href="#social-impact"
-            className="inline-flex items-center gap-2 font-body text-[13px] text-white/40
-                       hover:text-brand-primary transition-colors duration-200"
+            className="inline-flex items-center gap-3 group"
           >
-            Community rates for non-profits &amp; education
-            <span aria-hidden>↓</span>
+            <span className="inline-flex items-center font-heading font-bold text-[11px]
+                             tracking-[0.16em] uppercase px-3 py-1.5 rounded-full
+                             bg-brand-primary/15 border border-brand-primary/30 text-brand-primary">
+              Community Rates
+            </span>
+            <span className="font-body text-base text-white/70
+                             group-hover:text-white transition-colors duration-200">
+              For non-profits &amp; education
+            </span>
+            <span
+              aria-hidden
+              className="text-white/40 group-hover:text-brand-primary
+                         group-hover:translate-y-0.5 inline-block transition-all duration-200"
+            >
+              ↓
+            </span>
           </Link>
         </div>
 

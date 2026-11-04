@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --brand-primary:       #12D9DE;
   --brand-primary-hover: #0fb8bc;

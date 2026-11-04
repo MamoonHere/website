@@ -27,14 +27,14 @@ const SOCIAL_LINKS = [
 export default function Footer() {
   return (
     <>
-      <section className="bg-[#0a0a0a] py-28 lg:py-40">
+      <section className="bg-brand-bg-subtle py-28 lg:py-40">
         <div className="max-w-screen-2xl mx-auto px-8 lg:px-20 text-center">
-          <h2 className="font-heading font-bold text-white leading-[1.02]
+          <h2 className="font-heading font-bold text-brand-dark leading-[1.02]
                          text-4xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] mb-6
                          animate-hero-fade-up [animation-delay:100ms]">
             Ready to build<br />what&apos;s next?
           </h2>
-          <p className="font-body text-white/60 text-lg lg:text-xl leading-relaxed max-w-xl mx-auto mb-10
+          <p className="font-body text-neutral-600 text-lg lg:text-xl leading-relaxed max-w-xl mx-auto mb-10
                         animate-hero-fade-up [animation-delay:250ms]">
             We partner with ambitious teams to turn complex problems into polished, scalable digital products.
           </p>
@@ -42,8 +42,8 @@ export default function Footer() {
             href="/contact"
             className="inline-flex items-center gap-2 font-heading font-bold
                        text-[13px] sm:text-[14px] tracking-[0.18em]
-                       px-8 py-4 rounded-md bg-brand-primary text-brand-dark
-                       hover:bg-brand-primary-hover
+                       px-8 py-4 rounded-md bg-brand-dark text-white
+                       hover:bg-neutral-800
                        transition-all duration-300"
           >
             FREE DISCOVERY SESSION
